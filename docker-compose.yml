@@ -1,0 +1,25 @@
+services:
+  exposure-analysis:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/.env
+    environment:
+      # Core environment variables
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    volumes:
+      # Mount backend code for development
+      - ./backend:/app
+      # Use a named volume for /tmp to avoid Windows/WSL bind-mount quirks
+      - tmp_data:/tmp
+    working_dir: /app
+    command: python run_complete_exposure_analysis.py
+    # Override command when running interactively
+    # command: /bin/bash
+    # stdin_open: true
+    # tty: true
+
+volumes:
+  tmp_data:

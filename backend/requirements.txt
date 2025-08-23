@@ -1,0 +1,27 @@
+# Core dependencies for exposure analysis only
+
+# HTTP requests and web scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+urllib3>=2.0.0
+aiohttp>=3.8.0
+
+# JavaScript processing
+jsbeautifier>=1.14.0
+
+# Report generation
+reportlab>=4.0.0
+markdown>=3.4.0
+
+# File handling
+requests-file>=1.5.0
+
+# AI/ML (optional - for enhanced analysis)
+openai>=1.0.0
+
+# Environment and configuration
+python-dotenv>=1.0.0
+
+# Async support
+asyncio

@@ -1,0 +1,36 @@
+{
+  "name": "aigis-platform",
+  "version": "1.0.0",
+  "description": "Aigis Platform - AI-powered security analysis and secret detection",
+  "main": "index.js",
+  "scripts": {
+    "start": "./start.sh",
+    "start:rebuild": "./start.sh --rebuild",
+    "start:recreate": "./start.sh --recreate",
+    "test": "python -m pytest backend/tests/",
+    "lint": "black backend/ && isort backend/ && flake8 backend/",
+    "format": "black backend/ && isort backend/",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:rebuild": "docker-compose up --build -d",
+    "setup": "pip install -r backend/requirements.txt"
+  },
+  "keywords": [
+    "security",
+    "ai",
+    "secret-detection",
+    "api-security",
+    "fastapi",
+    "python"
+  ],
+  "author": "Aigis Platform Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.9"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  }
+}

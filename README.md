@@ -306,4 +306,4 @@ The `docker-compose.yml` mounts:
 
 ---
 
-**GuardAigis** - Your AI-powered security analysis partner 🤖
+**GuardAigis** - Your reliable partner security analysis partner in the Agentic AI Era 🤖
